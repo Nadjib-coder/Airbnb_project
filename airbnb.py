@@ -2,7 +2,7 @@
 import cmd
 
 class MyConsole(cmd.Cmd):
-    prompt = ">>>"
+    prompt = ">>> "
 
     def do_create(self, args):
         print("this method create ", args)
