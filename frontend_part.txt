@@ -29,5 +29,3 @@ if __name__ =  "__main__":
 if we creat a method named do_pld()
 	def do_pld(self, line):
 		print("We are having a pld")
-
-
