@@ -29,3 +29,10 @@ if __name__ =  "__main__":
 if we creat a method named do_pld()
 	def do_pld(self, line):
 		print("We are having a pld")
+
+Eache iteration through cmdloop() calls onecmd()
+if the line is empty  emptyline() is called
+
+														default() -> throw an error
+cmdloop() -> onecmd(line) -> parseline() -> precmd() -> invoke the commande
+				line		(commande,line)			    do_command()
