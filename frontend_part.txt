@@ -36,3 +36,7 @@ if the line is empty  emptyline() is called
 														default() -> throw an error
 cmdloop() -> onecmd(line) -> parseline() -> precmd() -> invoke the commande
 				line		(commande,line)			    do_command()
+
+# make the app work non-interactively
+	if not sys.stdin.isatty():
+		print()

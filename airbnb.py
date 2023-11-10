@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 import cmd
+import sys
 
 class MyConsole(cmd.Cmd):
     prompt = ">>> "
@@ -10,6 +12,9 @@ class MyConsole(cmd.Cmd):
     def precmd(self, line):
         # command, other = line.split(" ")
         # line = f"{command} Shoes"
+        # make the app work non-interactively
+        if not sys.stdin.isatty():
+            print()
         if "." in line:
            line = line.replace(".", " ").replace("(", "").replace(")", "")
            line = line.split(" ")
