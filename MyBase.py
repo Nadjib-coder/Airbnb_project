@@ -10,3 +10,6 @@ class MyBaseClass:
         self.id = str(uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
+
+    def save_update(self):
+        self.updated_at = datetime.now()
