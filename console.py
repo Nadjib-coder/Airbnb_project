@@ -3,7 +3,7 @@
 import cmd
 
 class HelloWorld(cmd.Cmd):
-    """simple command processor example."""
+    """Simple command processor example."""
 
     def do_greet(self, person):
         """greet [person]
@@ -16,5 +16,8 @@ class HelloWorld(cmd.Cmd):
     def do_EOF(self, line):
         return True
 
-if __name__ == "__main__":
+    def postloop(self):
+        print()
+
+if __name__ == '__main__':
     HelloWorld().cmdloop()
