@@ -9,4 +9,5 @@ class FileStorage:
         return FileStorage.__objects
 
     def new(slef, obj):
-        FileStorage.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
+        keyFormat = f"{obj.__class__.__name__}.{obj.id}"
+        FileStorage.__objects[keyFormat] = obj
