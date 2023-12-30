@@ -20,7 +20,9 @@ class MyBaseClass:
             self.updated_at = datetime.now()
 
     def save_update(self):
+        from engine import storage
         self.updated_at = datetime.now()
+        storage.save()
 
     def save_to_dict(self):
         dict_format = {}

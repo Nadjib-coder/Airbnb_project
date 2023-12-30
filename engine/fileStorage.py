@@ -28,7 +28,7 @@ class FileStorage:
         definedClasses = {'MyBase': MyBase}
 
         try:
-            with open(FileStorage.__objetcs, encoding="utf-8") as jsonStr:
+            with open(FileStorage.__filePath, encoding="utf-8") as jsonStr:
                 deserialized = load(jsonFile)
 
                 for objValue in deserialized.values():
