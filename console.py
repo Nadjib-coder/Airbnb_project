@@ -5,6 +5,7 @@ import cmd
 
 class HelloWorld(cmd.Cmd):
     """Simple command processor example."""
+    prompt="(hbnb) "
     FRIENDS = ['Nadjib', 'Fares', 'Abdou', 'Ali']
 
     def do_greet(self, person):
