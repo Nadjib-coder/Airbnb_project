@@ -15,9 +15,11 @@ class MyBaseClass:
                 else:
                     setattr(self, key, val)
         else:
+            from engine import storage
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new(self)
 
     def save_update(self):
         from engine import storage
